@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+h2 {
+  color: aliceblue;
+}
+video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+.logo {
+  width: 100px;
+  height: 80px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  background: linear-gradient(to bottom, white, transparent);
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+}
+.navbar-link {
+  list-style: none;
+  font-weight: 600;
+  font-size: larger;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease-out;
+}
+.navbar-link:hover {
+  transform: scale(1.1);
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
+
+.text {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text p {
+  font-size: 3rem;
+  color: aliceblue;
+  font-weight: 600;
+}
+.text h3 {
+  font-size: 1rem;
+  color: aliceblue;
+  font-weight: 400;
+}
+.text-section {
+  display: flex;
+  flex-direction: column;
+}
+.icon {
+  margin-right: 20px;
+}
+.bxr {
+  color: red;
+  cursor: pointer;
+}
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slide-info {
+  padding-left: 20px;
+}
+.img-description {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Animate scroll*/
+#gallery {
+  width: 98vw;
+}
+
+#gallery h3 {
+  font-family: "" Azeret Mono "", monospace;
+}
+
+#gallery header {
+  height: 90vh;
+  display: flex;
+}
+#gallery footer {
+  height: 0vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-group-container {
+  height: 400vh;
+  position: relative;
+}
+
+.img-group-container > div {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  height: 95vh;
+}
+
+.img-group {
+  display: flex;
+}
+
+.img-container {
+  display: flex;
+  width: 70vw;
+  height: 100vh;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#gallery header h2 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 0;
+}
+
+.img-container h3 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1.2;
+  position: relative;
+  bottom: 30px;
+  display: inline-block;
+  color: rgb(255, 0, 0);
+}
+
+.img-container img {
+  width: 500px;
+  height: 700px;
+}
+
+.progress {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #ff0000;
+  bottom: 3px;
+  transform: scaleX(0);
+}

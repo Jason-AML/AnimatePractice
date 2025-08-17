@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <video autoplay muted loop class="video-background">
+      <source
+        src="./assets/TDT8FS_Intro_SF25_16_9_ZULDO7.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <nav>
+      <img
+        src="./assets/logo-ferrari-removebg-preview.png"
+        alt="logo-ferrari"
+        class="logo"
+      />
+      <ul>
+        <li class="navbar-link"><a href="#">RACING</a></li>
+        <li class="navbar-link"><a href="#">SPORTS CARS</a></li>
+        <li class="navbar-link"><a href="#">ABOUT</a></li>
+        <li class="navbar-link"><a href="#">EXPERIENCE</a></li>
+      </ul>
+    </nav>
+    <div class="text">
+      <div class="icon">
+        <a href="#"
+          ><i
+            class="bxr bx-arrow-right-stroke-square"
+            style="font-size: 52px"
+          ></i
+        ></a>
+      </div>
+      <div class="text-section">
+        <h3>RACING</h3>
+        <div class="text-title">
+          <p>SCUDERIA FERRARI</p>
+        </div>
+      </div>
+    </div>
+
+    <article id="gallery">
+      <header></header>
+      <section class="img-group-container">
+        <div>
+          <ul class="img-group">
+            <li class="img-container">
+              <div class="slide">
+                <img src="./assets/logoferrari.jpg" />
+                <h3>#001</h3>
+              </div>
+              <div class="slide-info">
+                <p class="img-description">
+                  “We are not in the car business. We are in the dream
+                  business.”<br />
+                  <em>– Enzo Ferrari</em>
+                </p>
+              </div>
+            </li>
+            <li class="img-container">
+              <div class="slide">
+                <img src="./assets/laferrari1.jpg" />
+                <h3>#002</h3>
+              </div>
+              <div class="slide-info">
+                <p class="img-description">
+                  "We are not in the car business. We are in the dream
+                  business."<br />
+                </p>
+              </div>
+            </li>
+            <li class="img-container">
+              <div class="slide">
+                <img src="./assets/ferrarivintage.jpg" />
+                <h3>#003</h3>
+              </div>
+              <div class="slide-info">
+                <p class="img-description">
+                  “Every Ferrari tells a story of speed, power and passion.”<br />
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer></footer>
+    </article>
+    <div class="progress"></div>
+
+    <script type="module">
+      import {
+        animate,
+        scroll,
+      } from "https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm";
+
+      const items = document.querySelectorAll(".img-container");
+
+      // Animate gallery horizontally during vertical scroll
+      scroll(
+        animate(".img-group", {
+          transform: ["none", `translateX(-${(items.length - 1) * 75}vw)`],
+        }),
+        { target: document.querySelector(".img-group-container") }
+      );
+
+      // Progress bar representing gallery scroll
+      scroll(animate(".progress", { scaleX: [0, 1] }), {
+        target: document.querySelector(".img-group-container"),
+      });
+    </script>
+  </body>
+</html>

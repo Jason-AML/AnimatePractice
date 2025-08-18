@@ -21,8 +21,8 @@ video {
   z-index: -1;
 }
 .logo {
-  width: 100px;
-  height: 80px;
+  width: 80px;
+  height: 60px;
 }
 nav {
   display: flex;
@@ -56,7 +56,8 @@ a {
 .text {
   position: absolute;
   bottom: 10%;
-  left: 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,6 +71,7 @@ a {
   font-size: 1rem;
   color: aliceblue;
   font-weight: 400;
+  margin-bottom: -10px;
 }
 .text-section {
   display: flex;
@@ -133,7 +135,7 @@ a {
 
 .img-container {
   display: flex;
-  width: 70vw;
+  width: 100vw;
   height: 100vh;
   flex: 0 0 auto;
   align-items: center;
@@ -165,13 +167,42 @@ a {
   width: 500px;
   height: 700px;
 }
-
-.progress {
-  position: fixed;
-  left: 0;
-  right: 0;
-  height: 5px;
-  background: #ff0000;
-  bottom: 3px;
-  transform: scaleX(0);
+.navbar a {
+  font-size: 1rem;
+  font-weight: 500;
+}
+#news {
+  width: 100%;
+}
+.news-card1 {
+  height: 600px;
+  background-image: url(/assets/lecrec.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 70% 55%;
+  position: relative;
+}
+.news-card2 {
+  height: 600px;
+  background-image: url(/assets/museum.png);
+  background-size: cover;
+  background-position: 35%;
+  position: relative;
+}
+.news-body {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.news-body strong {
+  font-size: 1rem;
+}
+.news-body p {
+  font-size: 2rem;
+  font-weight: 600;
 }

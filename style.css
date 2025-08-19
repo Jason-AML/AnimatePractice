@@ -176,7 +176,7 @@ a {
 }
 .news-card1 {
   height: 600px;
-  background-image: url(/assets/lecrec.jpg);
+  background-image: url(./assets/lecrec.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 70% 55%;
@@ -184,7 +184,7 @@ a {
 }
 .news-card2 {
   height: 600px;
-  background-image: url(/assets/museum.png);
+  background-image: url(./assets/museum.png);
   background-size: cover;
   background-position: 35%;
   position: relative;
@@ -217,4 +217,39 @@ a {
   to {
     color: rgb(255, 255, 255);
   }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 50px;
+}
+.grid-3 {
+  --row: 6;
+  font-size: 5em;
+}
+.grid-3 div {
+  grid-column: 2/ 6;
+  text-wrap: nowrap;
+}
+.grid-3 div:nth-child(even) {
+  text-align: right;
+}
+@keyframes animateBlur {
+  0% {
+    filter: blur(40px);
+  }
+  45%,
+  55% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(40px);
+  }
+}
+.autoBlur {
+  animation: animateBlur linear both;
+  animation-timeline: view();
+}
+footer {
+  height: 300px;
 }

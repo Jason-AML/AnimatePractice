@@ -38,15 +38,15 @@ ul {
   display: flex;
   gap: 20px;
 }
-.navbar-link {
+.nav-item {
   list-style: none;
   font-weight: 600;
   font-size: larger;
   color: rgb(0, 0, 0);
   transition: transform 0.3s ease-out;
 }
-.navbar-link:hover {
-  transform: scale(1.1);
+.nav-item:hover {
+  transform: scale(1.3);
 }
 a {
   all: unset;
@@ -189,6 +189,10 @@ a {
   background-position: 35%;
   position: relative;
 }
+
+.bxr:hover {
+  animation: changeIconColor 0.5s ease-in-out forwards;
+}
 .news-body {
   position: absolute;
   left: 50%;
@@ -205,4 +209,12 @@ a {
 .news-body p {
   font-size: 2rem;
   font-weight: 600;
+}
+@keyframes changeIconColor {
+  from {
+    color: rgb(255, 0, 0);
+  }
+  to {
+    color: rgb(255, 255, 255);
+  }
 }
